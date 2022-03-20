@@ -1,0 +1,192 @@
+%-------------------------
+% Resume in Latex
+% Author : Mark Mavis
+% Website: https://github.com/MarkWMavis/Resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/markwmavis/}{\Large Mark Mavis}} & Email : \href{mailto:mmavis@uw.edu}{mmavis@uw.edu}\\
+  \href{https://www.linkedin.com/in/markwmavis/}{http://www.linkedin.com/markwmavis/} & Mobile : +1-425-681-8886 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Washington}{Bothell, WA}
+      {Bachelor of Science in Computer Science and Software Engineering;  GPA: 3.72}{Mar. 2020 -- est. Jun 2022}
+    \resumeSubheading
+      {Cascadia College}{Bothell, WA}
+      {AA in Science;  GPA: 3.53}{Jan. 2017 -- Dec. 2019}
+  \resumeSubHeadingListEnd
+  
+  %-----------UNIVERSITYEXPERIENCE-----------------
+\section{University Experience}
+
+    \resumeSubheading
+      {\href{https://colab.research.google.com/drive/11OrfO4j-lhP-BlNuPEAn9pYZbiehlyr-?usp=sharing/}{Deep Learning and Machine Vision in Agriculture Research}}{Bothell, WA}
+      {Course: Machine Intelligence}{Sep 2021 - Dec 2021}
+      \resumeItemListStart
+        \resumeItem{Objective}{Research the impact that image color balance variation has on machine learning model accuracy.}
+        \resumeItem{Machine Learning}
+          {Using Tensorflows' Keras deep learning API, I trained various models to identify objects in multiple image data sets. }
+        \resumeItem{Computer Vision}
+          {Using Pythons Computer Vision library, I stripped images into delimited files containing rows of pixel RGB values representing each image then input into model for training, testing, and validation.}
+        \resumeItem{Data Processing}
+          {Using a well established image data set from Kaggle, I duplicated the set and applied alterations to better understand the effects of lighting conditions on the ML model. Used Scikit-Learn library to randomized data set to reduce bias training.}
+        \resumeItem{Data Analysis}
+          {Using the Matplotlib library to analyse various model iterations to compared to each other. I was able to demonstrate that you could improve your models accuracy by approx. 11\% by matching the color balance of both the trained images and the test and validation images.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://drive.google.com/file/d/1hJzap162z4QhbNTTLVZgvl25AcmKWR-z/view}{M.L. Modeling in Medical Ultrasound Imaging}}{Bothell, WA}
+      {Course: Data Mining and Pattern Recognition}{Sep 2021 - Jan 2022}
+      \resumeItemListStart
+        \resumeItem{Objective}
+          {Data mine and perform a data set consisting of ultrasound patients that have experienced traumatic brain injuries to build a model that predicts internal or external bleeding.}
+        \resumeItem{Data Processing}
+          {Using Matlab, }
+        \resumeItem{Dimensionality Reduction}
+          {Performed Principle Component Analysis and singular value decomposition to identify reduced approximation of the ultrasound data.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+  
+  
+%-----------WORK EXPERIENCE-----------------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.vrbo.com/895076/}{Mavis Vacation Rentals}}{Seattle, WA}
+      {Lead Sales and Operations Manager}{Jan 2015 - Present}
+      \resumeItemListStart
+        \resumeItem{Growth Management}
+          {Grown bookings by 80\% and yearly occupancy rate by 82\% over 4 years, 35\% growth year over year (excluding periods of pandemic lockdown). 111\% rebound growth post COVID.  Grown Revenue by over 75\% since inception.}
+        \resumeItem{Hospitality}
+          {Achieved and maintain top 5 market rank of 550 surrounding properties in competitive housing market. Maintain all client hospitality relations, resulting in a 94\% 5-rating. }
+         \resumeItem{Market Analysis}
+          {Developed market specific pricing strategy based on area research, generating average booking length of ~1.5 weeks and Implemented remote management process, decreasing utility expenses by over 25\%}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Experis}{Redmond, WA}
+      {Test Associate I}{Nov 2019 - Apr 2020}
+      \resumeItemListStart
+        \resumeItem{Testing}
+          {Part of fourth generation Xbox console testing team.}
+        \resumeItem{Verification}
+          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Matthews Fresh Market}{Bellevue, WA}
+      {Marketing Manager}{Jan 2012 - Dec 2014}
+      \resumeItemListStart
+        \resumeItem{Public Service}
+          {Had the privilege of developing and launching food rewards program to give back to local schools, Generated over \$30,000 in donations.}
+        \resumeItem{Marketing Campaign Management}
+          {Proposed and executed re-branding campaign to increase brand reputation.}
+        \resumeItem{SEO Creation}
+          {Part of the team that designed and maintained the company's first website to increase brand awareness and loyalty. Designed marketing and promotional materials along with email campaigns in coordination with company sponsored events using Adobe's Software Suite.}
+      \resumeItemListEnd
+
+%-----------PROJECTS-----------------
+\section{\href{https://github.com/MarkWMavis}{Git Projects}}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://github.com/MarkWMavis/CSS_343/tree/main/Assignment04}{Movie Inventory System}}
+      {Perform Singular Value Decomposition .}
+    \resumeSubItem{\href{https://github.com/MarkWMavis/CSS_343/tree/main/Assignment03}{Dijkstra Algo. Implementation}}
+      {Open source python library for financial data analysis and machine learning for finance.sentence TTesting what happens when we wrap the }
+    \resumeSubItem{\href{https://github.com/MarkWMavis/CSS_342/tree/main/Assignment04}{Sorting Algo. Implementations}}
+      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+    \resumeSubItem{\href{https://github.com/MarkWMavis/CSS_430/tree/main/Homework/Program03}{Operating System CPU Process Scheduling System}}
+      {Implementation of the six types of operating systems CPU scheduling algorithms.}
+    \resumeSubItem{\href{https://github.com/MarkWMavis/CSS_430/tree/main/Homework/Program01}{Linux Shell Implementation}}
+      {Simple implementation of the a Linux shell.}
+    \resumeSubItem{\href{https://sagewalsh.github.io/385Assignments/HelloWorld/}{Hello World Game}}
+      {Team member of 4 that created the "Hello World" video game using Unity and C#}
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+  \resumeSubHeadingListEnd
+  
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: C++, C, Python, Assembly}
+     \hfill
+     \textbf{Technology Experience}{: Google Collaboratory, Visual Studio, Matlab, Git, Unity}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
