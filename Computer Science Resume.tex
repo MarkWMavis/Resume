@@ -1,111 +1,314 @@
-%-------------------------
-% Resume in Latex
-% Author : Mark Mavis
-% Website: https://github.com/MarkWMavis/Resume
-% License : MIT
-%------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+\documentclass[]{deedy-resume-openfont}
 \usepackage{fancyhdr}
-
-
+ 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-\setlength{\footskip}{4.08003pt}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeProjectsList}[4]{%
-% \vspace{-1pt}%
-  \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-
-    \end{tabular*}%
-%   \vspace{-5pt}
-}
-
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-\renewcommand{\labelitemii}{$\circ$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\fancyhf{}
+ 
 \begin{document}
-\input{Resumes/ResumeContent/_header}
 
-%-----------EDUCATION-----------------
-\section{Education}
-    \input{Resumes/ResumeContent/Education/_education}
-  
-  %--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
-    \input{Resumes/ResumeContent/ProgrammingSkills/_programmingSkills}
- 
-  %-----------GIT PROJECTS-----------------
-\section{Projects}
-    \input{Resumes/ResumeContent/Github Projects/_github}
- 
- %---------------UNIVERSITY-EXPERIENCE-----------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Mark}{Mavis}{ 
+    % \runsubsection{Computer Science \& Software Engineering Graduate seeking Internships}\\
+    \urlstyle{same}
+    
+    \href{https://www.linkedin.com/in/markwmavis/}{linkedin.com/MarkWMavis }| \href{https://github.com/MarkWMavis}{Github.com/MarkWMavis}  \\
+    Woodiville, WA | \href{tel:+14256818886}{425.681.8886} | \href{mailto:mmavis@uw.edu}{mmavis@uw.edu}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.35\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Bachelors of Science}
+\subsection{in Computer Science \&}
+\subsection{Software Engineering}
+\descript{University of Washington}
+\location{Expected Grad. Jun '22 | Bothell, WA}
+%College of Engineering \\
+\location{Major GPA: 3.70 / 4.0
+}
+\sectionsep
+
+\subsection{Associate in Science}
+\descript{Cascadia College}
+\location{Jan '18 - Jun '19 | Bothell, WA}
+\location{ Major GPA: 3.71 / 4.0 
+}
+\sectionsep
+
+\section{Honors \& Awards}
+\runsubsection{Deans List}
+\descript{| UW }
+\location{Spring '21, '20 | Autumn '21, '20}
+\runsubsection{Honor Society}
+\descript{| UW }
+\location{Tau Sigma Member since March '20}
+\runsubsection{Presidents Honors}
+\descript{| Cascadia }
+\location{Winter '19}
+\runsubsection{Faculty Honors}
+\descript{| Cascadia }
+\location{Spring '17}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Links} 
+% Facebook:// \href{https://facebook/dd}{\bf dd} \\
+% Github:// \href{https://github.com/deedydas}{\bf deedydas} \\
+% LinkedIn://  \href{https://www.linkedin.com/in/debarghyadas}{\bf debarghyadas} \\
+% YouTube://  \href{https://www.youtube.com/user/DeedyDash007}{\bf DeedyDash007} \\
+% Twitter://  \href{https://twitter.com/debarghya_das}{\bf @debarghya\_das} \\
+% Quora://  \href{https://www.quora.com/Debarghya-Das}{\bf Debarghya-Das}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills \& Experience}
+\subsection{Programming Languages}
+\location{High Lvl. Languages}
+C++ \textbullet{}   C \textbullet{} C\# \textbullet{} Python \textbullet{} Java \\
+\location{Low Lvl. Languages}
+Assembly: ARM \& Thumb2 \\
+\subsection{Engineering Software: }
+Visual Studio \textbullet{} VS Code \textbullet{} Git \textbullet{} Matlab \\
+Google Collaboratory \textbullet{} Unity \textbullet{} Logism \\
+Keil Microvision \textbullet{} Project Manager \\
+Figma \textbullet{} Adobe Suite \textbullet{} Autodesk CAD\\
+\subsection{Web Development}
+CSS \textbullet{} HTML \textbullet{} JavaScript \\
+\subsection{Project Management}
+Scrum \textbullet{} Agile \textbullet{} Waterfall  \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+% \subsection{Graduate}
+% Advanced Machine Learning \\
+% Open Source Software Engineering \\
+% Advanced Interactive Graphics \\
+% Compilers + Practicum \\
+% Cloud Computing \\
+% Evolutionary Computation \\
+% Defending Computer Networks \\
+% Machine Learning \\
+% \sectionsep
+
+\subsection{Undergraduate}
+Machine Intelligence \\
+Data Mining \& Pattern Recognition \\
+Data Structures and Algorithms I \& II \\
+Hardware \& Microcontrollers\\
+Operating Systems \\
+Software Project Management \\
+Software \& Usability Engineering \\
+Calculus 1, 2, 3 \& Physics 1, 2 \\
+Matrix Algebra \& Discrete Mathematics\\
+Game Development\\
+% {\footnotesize \textit{\textbf{(Research Asst. \& Teaching Asst 2x) }}} \\
+% Unix Tools and Scripting \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.64\textwidth} 
+
+% \runsubsection{Coursera}
+% \descript{| KPCB Fellow + Software Engineering Intern }
+% \location{June 2014 – Sep 2014 | Mountain View, CA}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \begin{tightemize}
+% \item 52 out of 2500 applicants chosen to be a KPCB Fellow 2014.
+% \item Led and shipped Yoda - the admin interface for the new Phoenix platform. 
+% \item Full-stack developer - Wrote and reviewed code for JS using Backbone, Jade, Stylus and Require and Scala using Play
+% \end{tightemize}
+% \sectionsep
+
+% \runsubsection{Google}
+% \descript{| Software Engineering Intern }
+% \location{May 2013 – Aug 2013 | Mountain View, CA}
+% \begin{tightemize}
+% \item Worked on the YouTube Captions team, in Javascript and Python to plan, to design and develop the full stack to add and edit Automatic Speech Recognition captions. In production.
+% \item Created a backbone.js-like framework for the Captions editor.
+% \end{tightemize}
+% \sectionsep
+
+% \runsubsection{Phabricator}
+% \descript{| Open Source Contributor \& Team Leader}
+% \location{Jan 2013 – May 2013 | Palo Alto, CA \& Ithaca, NY}
+% \begin{tightemize}
+% \item Phabricator is used daily by Facebook, Dropbox, Quora, Asana and more.
+% \item I created the Meme generator and more in PHP and Shell.
+% \item Led a team from MIT, Cornell, IC London and UHelsinki for the project.
+% \end{tightemize}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{University Research}
-    \resumeSubHeadingListStart
-        \input{Resumes/ResumeContent/UniversityResearchExperience/_deepLearningMachineVisionProject}
-        \input{Resumes/ResumeContent/UniversityResearchExperience/_mlModelingInMedicalUltrasoundImaging}
-    \resumeSubHeadingListEnd
- 
-%-----------WORK EXPERIENCE-----------------
+\runsubsection{\href{https://colab.research.google.com/drive/11OrfO4j-lhP-BlNuPEAn9pYZbiehlyr-?usp=sharing}{Deep Learning and Machine Vision in Agriculture}}
+\descript{| Undergraduate Researcher}
+\location{Sep 2021 – Dec 2021 | Bothell, WA}
+Under \textbf{\href{https://sites.google.com/uw.edu/dais-uw/home?authuser=0}{Dr. Dong Si}}, researched the effects of image color balance on Machine Vision and ML model accuracy. \newline
+    \begin{tightemize}
+        \item \textbf{Machine Learning: } Engineered model using Tensorflows’ Keras deep learning API to identify object classes at 97\% success rate.
+        \item \textbf{Computer Vision: } Implemented Pythons Computer Vision library to generate delimited pixel files to modularize proceeding tasks.
+        \item \textbf{Data Processing: } Simulated various lighting conditions through data set pixel manipulation using Adobe software. \item 
+        \textbf{Training Bias Reduction: } Configured the randomization of delimited data using SciKit library reducing training bias \& improving accuracy by over 30\%.
+        \item \textbf{Testing Configuration: } Developed flexible testing algorithm using Google Colab to accelerate iterations. 
+        \item \textbf{Refined Model Accuracy: } Successfully proved initial hypothesis and identified an 11\% increase in model accuracy using Matplotlib library.
+    \end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://drive.google.com/file/d/1hJzap162z4QhbNTTLVZgvl25AcmKWR-z/view}{M.L. Modeling in Medical Ultrasound Imaging}}
+\descript{| Undergraduate Researcher}
+\location{Sep 2021 – Jan 2022 | Bothell, WA}
+Under \textbf{\href{https://www.uwb.edu/css/faculty/bios/eparsons}{Prof Erika Parsons, ph.D.}}, Analyzed CT scans of traumatic brain injury patients to predict internal head trauma on Ultrasound.
+\begin{tightemize}
+\item \textbf{Data Analysis: } Implemented statistical analysis on 3 dimensional tissue density data for both CT and ultrasound scans to identify patterns.
+\item \textbf{Dimensionality Reduction: } Engineered a reduced approximation of the data using Principle Component Analysis and Singular Value Decomposition.
+\item \textbf{Formulated Predictions} Created proprietary blood scan predictions script using principle components and Matlab.
+\end{tightemize}
+\sectionsep
+
+\section{Coding Projects}
+\runsubsection{\href{https://github.com/MarkWMavis}{GITHUB}}
+\descript{| Repositories}
+\begin{tabularx}{1\textwidth} { 
+   >{\raggedright\arraybackslash}X 
+   >{\raggedright\arraybackslash}X 
+   >{\raggedright\arraybackslash}X }
+% \hline
+
+ \href{https://github.com/MarkWMavis/CSS_343_DataStructures_II/tree/main/04_InventorySystem}{Movie Inventory} & 
+ \href{https://github.com/MarkWMavis/CSS_343_DataStructures_II/tree/main/03_DijkstraShortestPath}{Dijkstra Algo.} & 
+ \href{https://github.com/MarkWMavis/CSS_342_DataStructures_I/tree/main/04_MergeSort}{Sorting Algos} \\
+ %\hline
+ \href{https://github.com/MarkWMavis/CSS_430_OperatingSystems/tree/main/P3_Scheduling\%20Algorithms}{CPU Scheduling}  & 
+ \href{https://github.com/MarkWMavis/CSS_430_OperatingSystems/tree/main/P1_2_Unix\%20Shell}{Shell Implementation} & 
+ \href{https://markwmavis.github.io/CSS_385_HelloWorld/}{Hello World Game} \\
+%\hline
+\end{tabularx}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \section{Work Experience}
-\input{Resumes/ResumeContent/WorkExperience/_combined}
-  
-%-------------------------------------------
-\end{document}
+\runsubsection{Lead sales and Operations Manager}
+\descript{| Mavis Vacation Rentals}
+\location{Jan 2015 – current | Woodinville, WA}
+Established 
+\begin{tightemize}
+    \item \textbf{Success Generation: } Delivered over half a million in gross income in 5 years.
+    \item \textbf{Growth Management: } Delivered 80\% Growth in bookings, produced 59\% increase in occupancy rate, and boosted revenue by 75\%  since inception.
+    \item \textbf{Client Relations: } Consulted on all client hospitality, achieving top 5 market rank with 85+ 5-star ratings, a 94\% 5-rating. 
+    \item \textbf{Market Analysis: } Implemented custom local market pricing strategy, producing a 93\% occupancy rate, outperforming competition.
+    \item \textbf{Operations Efficiency: } Implemented remote management strategy to decrease utility expenses by over 25\%, maximizing available resources.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards} 
+% \begin{tabular}{rll}
+% 2014	     & top 52/2500  & KPCB Engineering Fellow\\
+% 2014	     & 1\textsuperscript{st}/50  & Microsoft Coding Competition, Cornell\\
+% 2013	     & National  & Jump Trading Challenge Finalist\\
+% 2013     & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament  \\
+% 2012     & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+% 2011     & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications} 
+% \renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
